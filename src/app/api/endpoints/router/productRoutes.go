@@ -11,4 +11,5 @@ func loadProductRoutes(api *echo.Group) {
 	productHandlers := dicontainer.GetProductHandlers()
 
 	productGroup.POST("/new", productHandlers.PostProduct)
+	productGroup.GET("", productHandlers.GetProducts)
 }
